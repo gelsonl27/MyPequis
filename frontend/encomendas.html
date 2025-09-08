@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Encomendas</title>
+    <link rel="stylesheet" href="css/encomendas.css">
+</head>
+<body>
+    <h2>Encomenda</h2>
+    <form id="form-encomenda">
+        <input type="text" id="codigo" placeholder="Código da encomenda" required>
+        <input type="text" id="destinatario" placeholder="Destinatário" required>
+        <input type="text" id="bloco" placeholder="Bloco" required>
+        <input type="text" id="apartamento" placeholder="Apartamento" required>
+        <select id="tipo">
+            <option>Pequeno</option>
+            <option>Médio</option>
+            <option>Grande</option>
+        </select>
+        <select id="entregador_id" required>
+          <option value="">Selecione o entregador</option>
+        </select>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <br>
+    <button onclick="window.location.href='index.html'" style="margin-bottom: 20px; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        ← Voltar para Página Inicial
+    </button>
+
+    <script type="module" src="./js/encomendas.js"></script>
+</body>
+</html>

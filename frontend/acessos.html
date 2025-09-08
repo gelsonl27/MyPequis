@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Acessos</title>
+    <link rel="stylesheet" href="css/acessos.css">
+</head>
+<body>
+    <h2>Controle de Acessos</h2>
+    
+
+    <form id="form-acesso">
+
+        <input type="text" id="nome" placeholder="Nome Completo" required>
+        <input type="text" id="documento" placeholder="CPF ou RG" required>
+        <input type="text" id="placa" placeholder="Placa do Veículo" required>
+        <input type="text" id="bloco" placeholder="bloco de destino" required>
+        <input type="text" id="unidade" placeholder="Unidade/Apartamento" required>
+
+        <select id="tipo">
+            <option value="visitante">Visitante</option>
+            <option value="prestador">Prestador de Serviço</option>
+        </select>
+
+        <input type="text" id="liberado_por" placeholder="Quem liberou o acesso" required>
+
+        <label><input type="checkbox" id="liberacao_permanente">Liberação pemanente</label>
+        <input type="date" id="data_fim" placeholder="Data da liberação">
+
+        <input type="hidden" id="foto_base64" name="foto_base64">
+
+        <button type="submit">Cadastrar Acesso</button>
+    </form>
+
+    <h3>Foto</h3>
+    <video id="video" autoplay playsinline width="300"></video><br>
+    <button id="capturar">📸 Capturar Foto</button>
+    <canvas id="canvas" style="display:none;"></canvas>
+    <img id="foto-capturada" src="" alt="Foto Capturada" style="margin-top: 10px; max-width: 300px;">
+
+    <hr>
+
+    <h3>Consultar Acesso por por RG ou CPF</h3>
+    <input type="text" id="consulta-doc" placeholder="Digite RG ou CPF">
+    <button id="btn-consulta">Consutar</button>
+
+    <!-- Modal -->
+     <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="fechar" class="close">&times;</span>
+            <img id="modal-foto" src="" alt="Foto do Visitante" style="max-width: 100%; border-radius: 10px; margin-top: 10px;"><br>
+            <div id="modal-info"></div>
+                <h3>Detalhes do Acesso</h3>
+        </div>
+     </div>
+
+     <button onclick="window.location.href='index.html'" style="margin-bottom: 20px; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        ← Voltar para Página Inicial
+    </button>
+
+     <script type="module" src="./js/acessos.js"></script>
+</body>
+</html>

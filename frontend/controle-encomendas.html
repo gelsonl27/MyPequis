@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/controle-encomendas.css" />
+</head>
+
+<body>
+    <div class="container">
+        
+        <h2 class="titulo">📦 Controle de Encomendas</h2>
+
+        <form id="form-controle">
+            <div id="enderecos-container">
+                <div class="campo">
+                    <label>Endereço de Entrega</label>
+                    <input type="text" name="enderecos[]" placeholder="Rua, número, complemento..." required />
+                </div>
+            </div>
+
+            <button type="button" id="add-endereco">+ Endereço</button>
+
+            <div class="campo">
+                <label>Data de Entrega</label>
+                <input type="date" id="data" required />
+            </div>
+
+            <div class="campo">
+                <label>Hora da Entrega</label>
+                <input type="time" id="hora" required />
+            </div>
+
+            <div class="campo">
+                <label>Entregador Responsável</label>
+                <select id="entregador" required>
+                    <option value="">Selecione</option>
+                    <!-- Opções serão adicionadas via JS -->
+                </select>
+            </div>
+
+            <button type="submit">Cadastrar Encomenda</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="busca-por-data">
+        <h3>🔍 Buscar Encomendas por Data</h3>
+        <input type="date" id="data-busca" />
+        <button id="btn-buscar-data" type="button">Buscar</button>
+    </div>
+
+    <!--Modal-->
+
+    <div id="modal-data" class="modal hidden">
+        <div class="modal-content">
+            <span id="fechar-modal" class="close">&times;</span>
+            <h3>📋 Resultados da Busca</h3>
+            <div id="resultados"></div>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+            <a href="index.html" class="btn-voltar">← Voltar para Página Inicial</a>
+    </div>
+
+    <script type="module" src="./js/controle-encomendas.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f6fa;
+    color: #2f3640;
+    padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #2f3640;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+ a:hover {
+  background-color: #44bd32;
+  color: #fff;
+}
+
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #273c75;
+    text-align: center;
+}
+
+input[type="text"],
+button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #dcdde1;
+    margin-right: 8px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 280px;
+}
+
+button {
+    background-color: #44bd32;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cd137;
+}
+
+#resultado {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#resultado h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #192a56;
+    border-bottom: 2px solid #dcdde1;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background-color: #ffffff;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-left: 5px solid #00a8ff;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.01);
+}
+
+#add-endereco {
+    background-color: #40739e;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#add-endereco:hover {
+  background-color: #3498db;
+}
+
+@media (max-width: 500px) {
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

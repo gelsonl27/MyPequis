@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Acessos</title>
+    <link rel="stylesheet" href="css/listagem.css">
+</head>
+<body>
+    <h2>Listagem de Registros</h2>
+
+    <input type="text" id="filtro" placeholder="Digite o nome para filtrar..." />
+    <button onclick="buscarTodos()">Buscar</button>
+
+    <div id="resultado">
+        <h3>Entregadores</h3>
+        <ul id="lista-entregadores"></ul>
+
+        <h3>Encomendas</h3>
+        <ul id="lista-encomendas"></ul>
+
+        <h3>Convidados (Salões)</h3>
+        <ul id="lista-agendamentos"></ul>
+    </div>
+
+    <br>
+    <button onclick="window.location.href='index.html'" style="margin-bottom: 20px; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        ← Voltar para Página Inicial
+    </button>
+
+    <script type="module" src="./js/listagem.js"></script>
+</body>
+</html>
